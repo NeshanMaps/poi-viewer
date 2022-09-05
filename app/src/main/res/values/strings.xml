@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">POI Viewer</string>
+    <string name="search_hint">جستجو...</string>
+    <string name="connection_error">خطا در ارتباط</string>
+    <string name="mosques">مساجد</string>
+    <string name="bakeries">نانوایی</string>
+    <string name="atms">دستگاه خودپرداز</string>
+</resources>
