@@ -61,8 +61,6 @@ public class MainActivity extends AppCompatActivity implements SearchAdapter.OnS
         items = new ArrayList<>();
         adapter = new SearchAdapter(items, this);
 
-        mapView.getSettings().setZoomControlsEnabled(true);
-
         btnMosques.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
