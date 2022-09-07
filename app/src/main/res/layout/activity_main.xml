@@ -32,14 +32,14 @@
         android:layout_margin="5dp"
         android:text="@string/mosques"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@id/btn_atms" />
+        app:layout_constraintBottom_toTopOf="@id/btn_banks" />
 
     <Button
-        android:id="@+id/btn_atms"
+        android:id="@+id/btn_banks"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:text="@string/atms"
+        android:text="@string/banks"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent" />
 

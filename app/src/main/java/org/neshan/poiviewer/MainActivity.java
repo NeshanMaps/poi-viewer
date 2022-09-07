@@ -36,11 +36,11 @@ public class MainActivity extends AppCompatActivity implements SearchAdapter.OnS
 
     private static final String BAKERY = "نانوایی";
     private static final String MOSQUE = "مسجد";
-    private static final String ATM = "atm";
+    private static final String BANK = "بانک";
 
     private MapView mapView;
     private Button btnMosques;
-    private Button btnAtms;
+    private Button btnBanks;
     private Button btnBakery;
 
     private List<Item> items;
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity implements SearchAdapter.OnS
 
         mapView = findViewById(R.id.mapview);
         btnMosques = findViewById(R.id.btn_mosque);
-        btnAtms = findViewById(R.id.btn_atms);
+        btnBanks = findViewById(R.id.btn_banks);
         btnBakery = findViewById(R.id.btn_bakery);
 
         items = new ArrayList<>();
@@ -68,10 +68,10 @@ public class MainActivity extends AppCompatActivity implements SearchAdapter.OnS
             }
         });
 
-        btnAtms.setOnClickListener(new View.OnClickListener() {
+        btnBanks.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                search(mapView.getCameraTargetPosition(), ATM);
+                search(mapView.getCameraTargetPosition(), BANK);
             }
         });
 
@@ -103,8 +103,8 @@ public class MainActivity extends AppCompatActivity implements SearchAdapter.OnS
                                 if (text.equals(MOSQUE) && item.getType().equals("mosque")) {
                                     mapView.addMarker(createMarker(new LatLng(item.getLocation().getLatitude(), item.getLocation().getLongitude()), R.drawable.mosque));
                                 }
-                                if (text.equals(ATM) && item.getType().equals("atm")) {
-                                    mapView.addMarker(createMarker(new LatLng(item.getLocation().getLatitude(), item.getLocation().getLongitude()), R.drawable.atm));
+                                if (text.equals(BANK) && item.getType().equals("bank")) {
+                                    mapView.addMarker(createMarker(new LatLng(item.getLocation().getLatitude(), item.getLocation().getLongitude()), R.drawable.bank));
                                 }
                                 if (text.equals(BAKERY) && item.getType().equals("bakery")) {
                                     mapView.addMarker(createMarker(new LatLng(item.getLocation().getLatitude(), item.getLocation().getLongitude()), R.drawable.bakery));
@@ -153,7 +153,6 @@ public class MainActivity extends AppCompatActivity implements SearchAdapter.OnS
         // and then call buildStyle method on it. This method returns an object of type MarkerStyle
         MarkerStyleBuilder markStCr = new MarkerStyleBuilder();
         markStCr.setSize(20f);
-//        markStCr.setAnchorPoint(-.1f,.3f);
         markStCr.setBitmap(BitmapUtils.createBitmapFromAndroidBitmap(BitmapFactory.decodeResource(getResources(), markerDrawable)));
         // AnimationStyle object - that was created before - is used here
         markStCr.setAnimationStyle(animSt);

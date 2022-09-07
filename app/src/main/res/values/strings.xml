@@ -4,5 +4,5 @@
     <string name="connection_error">خطا در ارتباط</string>
     <string name="mosques">مساجد</string>
     <string name="bakeries">نانوایی</string>
-    <string name="atms">دستگاه خودپرداز</string>
+    <string name="banks">بانک</string>
 </resources>
