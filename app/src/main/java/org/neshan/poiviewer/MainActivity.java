@@ -58,6 +58,8 @@ public class MainActivity extends AppCompatActivity implements SearchAdapter.OnS
         btnBanks = findViewById(R.id.btn_banks);
         btnBakery = findViewById(R.id.btn_bakery);
 
+        mapView.getSettings().setZoomControlsEnabled(true);
+
         items = new ArrayList<>();
         adapter = new SearchAdapter(items, this);
 
