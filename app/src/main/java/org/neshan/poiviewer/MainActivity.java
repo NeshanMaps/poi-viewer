@@ -85,13 +85,6 @@ public class MainActivity extends AppCompatActivity implements SearchAdapter.OnS
         });
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-        mapView.getSettings().setZoomControlsEnabled(true);
-    }
-
     private void search(LatLng searchPosition, String text) {
         //TODO: Replace YOUR-API-KEY with your api key
         new NeshanSearch.Builder("YOUR-API-KEY")
